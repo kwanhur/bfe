@@ -96,6 +96,11 @@ compile-strip: test build-strip
 build-strip:
 	$(GOBUILD) -ldflags "-X main.version=$(BFE_VERSION) -X main.commit=$(GIT_COMMIT) -extldflags=-static -s -w"
 
+# make compile-cli, go build
+compile-cli: build-cli
+build-cli:
+	$(GOBUILD) -ldflags "-X main.commit=$(GIT_COMMIT)" -o bfecli ./bfe_cli/
+
 # make test, test your code
 test: test-case vet-case
 test-case:

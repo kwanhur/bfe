@@ -25,6 +25,10 @@ coverage.txt
 .idea/*
 .vscode/*
 bfe
+bfecli
 dist/*
 
 .DS_Store
+
+/bfe_cli/bfecli
+/bfe_cli/bfe_cli
